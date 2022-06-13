@@ -32,25 +32,41 @@ let tl2 = gsap.timeline({
         });
 
         tl2.fromTo('#section-2', 5, {y:"0%", },{y:"-100%"},'first')
-        tl2.fromTo('.sec-2-element-1', 10, {y:"100%", },{y:"-170%", rotation : -50},'s')
+        tl2.fromTo('.sec-2-element-1', 10, {y:"100%", },{y:"-170%", rotation : -50},'s');
 
 
-        let tl = gsap.timeline({
-            scrollTrigger :{
-                trigger : "#projects",
-                pin: true, 
-                scrub: true,
-                nullTargetWarn: false,
-                start : "top top",
-                end: '+=1900',
-              }
-                });
+        gsap.registerPlugin(ScrollTrigger);
 
-                tl.to('.one',5, {x: '-250%'},"1");
-                tl.to('.two',5, {x: '-350%'},"2");
-                tl.to('.three',5, {x: '-450%'},"3");
-                tl.to('.four',5, {x: '-600%'},"4");
-                tl.to('.five',5, {x: '-700%'},"5");
-                tl.to( CSSRulePlugin.getRule("#projects"), {duration: 2, cssRule: { backgroundColor : "#000",}}, "BGC-change");
+        let sections = gsap.utils.toArray(".card");
+        
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".slider-container",
+            pin: true,
+            scrub: 1,
+            snap: 1 / (sections.length - 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: "+=3500",
+          },
+         
+        });
+ 
+        
+
+        // let tl = gsap.timeline({
+        //     scrollTrigger :{
+        //         trigger : ".black",
+        //         pin: true, 
+        //         scrub: true,
+ 
+        //         start : "center center",
+        //         end: 'bottom bottom',
+        //       }
+        //         });
+        //         tl.to( CSSRulePlugin.getRule(".black"), {duration: 1, cssRule: { backgroundColor : "#000",}}, "BGC-change");
+    
+
 
                
