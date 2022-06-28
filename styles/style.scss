@@ -3,9 +3,11 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
+
 .blue {
     color: #003566;
 }
@@ -469,9 +471,11 @@ html {
     background-color: #FDB913;
     padding-top: 200px;
     overflow: hidden;
-.sec-5-colums{
-    margin-top: 200px;
-}
+
+    .sec-5-colums {
+        margin-top: 200px;
+    }
+
     .sec-5-button {
         box-sizing: border-box;
         height: 40px;
@@ -519,6 +523,7 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         h1 {
             color: #FDB913;
             font-family: Montserrat;
@@ -542,7 +547,8 @@ html {
         }
     }
 }
-#section-6{
+
+#section-6 {
     background-color: #FDB913;
     width: 100%;
     height: 100vh;
@@ -551,36 +557,207 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    .sec-6-text{
+
+    .sec-6-text {
         position: relative;
         z-index: 1;
         width: 65%;
-        
-        h6{
-        color: #FFF;
-        font-family: 'Montserrat';
-        font-size: 38px;
-        font-weight: 700;
-        line-height: 1.2;
-        text-align: center; 
+
+        h6 {
+            color: #FFF;
+            font-family: 'Montserrat';
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
         }
-      
-      
+
+
     }
-  .sec-6-button {
-            box-sizing: border-box;
+
+    .sec-6-button {
+        box-sizing: border-box;
+        height: 40px;
+        width: 196px;
+        border: 2px solid #000;
+        color: rgb(0, 0, 0);
+        font-family: 'Montserrat';
+        font-size: 16px;
+        line-height: 18px;
+        text-align: justify;
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bi-arrow-right {
+            font-size: 28px;
+            border-left: #003566 solid 1px;
+            margin-left: 20px;
+            padding-left: 5px;
             height: 40px;
-            width: 196px;
+            line-height: 1.5;
+        }
+
+        &:hover {
+            padding-left: 15px;
+            transition: all 0.5s ease;
+        }
+
+        &:hover .bi-arrow-right {
+            position: absolute;
+            border-right: #000000 solid 1px;
+            background-color: #000000;
+            color: #fff;
+            left: -22px;
+            transition: all 0.5s ease;
+
+        }
+    }
+
+    .bg-reotation {
+        position: absolute;
+        bottom: -300px;
+        left: -500px;
+        width: 160%;
+        height: 90vh;
+        background-color: #FDC742;
+        transform: rotate(25deg);
+        z-index: 0;
+
+    }
+}
+
+.section-7 {
+    height: 100vh;
+    width: 100%;
+    background-color: #DDF9FF;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    overflow: hidden;
+
+    .sec-7-first-row-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 50%;
+
+        .sec-7-elemnt-1 {
+            width: 155px;
+            position: absolute;
+            left: 10%;
+        }
+
+        .heading-1 {
+            color: #000;
+            font-family: Montserrat;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 50px;
+            text-align: center;
+
+            h6 {
+                font-style: italic;
+            }
+        }
+
+        .sec-7-elemnt-2 {
+            width: 652px;
+            position: absolute;
+            right: -250px;
+        }
+
+
+    }
+
+    .sec-7-second-row-container {
+        position: relative;
+ 
+
+        h1 {
+            color: #00ADE5;
+            font-family: Montserrat;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 122px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .sec-7-elemnt-3 {
+            width: 70px;
+            position: absolute;
+            right: 10%;
+        }
+
+    }
+
+    .sec-7-third-row-container {
+        position: relative;
+        margin-top: 50px;
+        .sec-7-elemnt-4 {
+            position: absolute;
+            width: 650px;
+            left: -250px;
+        }
+
+        .heading-2 {
+            width: 50%;
+            color: #000;
+            font-family: 'Montserrat';
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 50px;
+            text-align: center;
+
+            h6 {
+                font-size: 12px;
+                padding: 0px 70px;
+            }
+        }
+
+        .sec-7-elemnt-5 {
+            position: absolute;
+            width: 250px;
+            right: -150px;
+            top: 100px;
+        }
+    }
+    .sec-7-fourth-row-container{
+        position: relative;
+        height: 100%;
+        .sec-7-elemnt-6{
+            width: 250px;
+            position: absolute;
+            left: 20%;
+            top: 150px;
+        }
+        .sec-7-elemnt-7{
+            position: absolute;
+            right: 10%;
+            width: 150px;
+            top: 70px;
+        }
+        .sec-7-button {
+      
+            height: 40px;
+            width: 250px;
             border: 2px solid #000;
             color: rgb(0, 0, 0);
             font-family: 'Montserrat';
-            font-size: 16px;
-            line-height: 18px;
-            text-align: justify;
+            font-size:  12px;
+            line-height: 1.5;
+      
             background-color: transparent;
             position: relative;
             z-index: 1;
-    margin-top: 50px;
+            margin-top: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -609,21 +786,5 @@ html {
     
             }
         }
-    .bg-reotation{
-        position: absolute;
-        bottom: -300px;
-        left: -500px;
-        width: 160%;
-        height: 90vh;
-        background-color: #FDC742;
-        transform: rotate(25deg);
-        z-index: 0;
-      
     }
-}
-
-.section-7{
-    height: 100vh;
-    width: 100%;
-    background-color: #DDF9FF;
 }
