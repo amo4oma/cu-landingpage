@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .blue {
   color: #003566;
 }
@@ -106,6 +110,16 @@
      object-fit: contain;
 }
 
+.opacityZero {
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.opacityOne {
+  opacity: 1;
+}
+
 #section-2 {
   position: absolute;
   height: 150vh;
@@ -185,10 +199,61 @@
   line-height: 24px;
 }
 
+.view-project-button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  width: 196px;
+  border: 2px solid #003566;
+  color: #003566;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 18px;
+  text-align: justify;
+  background-color: #fff;
+  position: absolute;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view-project-button .bi-arrow-right {
+  font-size: 28px;
+  border-left: #003566 solid 1px;
+  margin-left: 20px;
+  padding-left: 5px;
+  height: 40px;
+  line-height: 1.5;
+}
+
+.view-project-button:hover {
+  padding-left: 15px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.view-project-button:hover .bi-arrow-right {
+  position: absolute;
+  border-right: #003566 solid 1px;
+  background-color: #003566;
+  color: #fff;
+  left: -22px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 #projects {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 #projects .slider-container {
@@ -205,7 +270,7 @@
 #projects .slider-container .card {
   position: relative;
   width: 100%;
-  height: 100vh !important;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,6 +351,8 @@
 
 #projects .slider-container .card .card-text-col .view-project-button:hover {
   padding-left: 15px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #projects .slider-container .card .card-text-col .view-project-button:hover .bi-arrow-right {
@@ -294,17 +361,327 @@
   background-color: #003566;
   color: #fff;
   left: -22px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #projects .slider-container .card .card-number {
   position: absolute;
   top: 200px;
-  left: 280px;
+  left: 5em;
   z-index: 5999;
   color: #003566;
   font-family: Montserrat;
   font-size: 70px;
   font-weight: 700;
   line-height: 110px;
+}
+
+#projects .slider-container .card.active {
+  background-color: #000 !important;
+}
+
+#projects .scroll-bar-container {
+  position: fixed;
+  left: 45%;
+  top: 80%;
+  z-index: 999999999 !important;
+  height: 20px;
+  width: 500px;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#projects .scroll-bar-container .scroll-dot {
+  height: 2px;
+  width: 20px;
+  background-color: #dbdbdb;
+  margin-right: 5px;
+}
+
+#projects .scroll-bar-container .first {
+  background-color: #003566;
+}
+
+#section-4 {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  background-color: #171717;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#section-4 .why-important {
+  font-family: 'Montserrat';
+}
+
+#section-4 .why-important h3 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+#section-4 .why-important h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+#section-4 .bulding-blocks {
+  margin-top: 10px;
+  background-image: url(../Assests/sec-4-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 600px;
+}
+
+#section-4 .bulding-blocks p {
+  font-size: 17px;
+  font-family: "Montserrat";
+  color: #fff;
+  line-height: 0.5;
+}
+
+#section-4 .bulding-blocks h6 {
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #fff;
+  line-height: .5;
+}
+
+#section-4 .sec-4-scroll-bar-container {
+  height: 20px;
+  width: 500px;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-4 .sec-4-scroll-bar-container .sec-4-scroll-dot {
+  height: 2px;
+  width: 20px;
+  background-color: #1E1E1E;
+  margin-right: 5px;
+  margin-bottom: 50px;
+}
+
+.section-5 {
+  width: 100%;
+  height: 180vh;
+  background-color: #FDB913;
+  padding-top: 200px;
+  overflow: hidden;
+}
+
+.section-5 .sec-5-colums {
+  margin-top: 200px;
+}
+
+.section-5 .sec-5-button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  width: 196px;
+  border: 2px solid #000;
+  color: black;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 18px;
+  text-align: justify;
+  background-color: transparent;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.section-5 .sec-5-button .bi-arrow-right {
+  font-size: 28px;
+  border-left: #003566 solid 1px;
+  margin-left: 20px;
+  padding-left: 5px;
+  height: 40px;
+  line-height: 1.5;
+}
+
+.section-5 .sec-5-button:hover {
+  padding-left: 15px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.section-5 .sec-5-button:hover .bi-arrow-right {
+  position: absolute;
+  border-right: #000000 solid 1px;
+  background-color: #000000;
+  color: #fff;
+  left: -22px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.section-5 .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-5 .title-container h1 {
+  color: #FDB913;
+  font-family: Montserrat;
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  width: 75%;
+}
+
+.section-5 .title-container p {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#section-6 {
+  background-color: #FDB913;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-6 .sec-6-text {
+  position: relative;
+  z-index: 1;
+  width: 65%;
+}
+
+#section-6 .sec-6-text h6 {
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+#section-6 .sec-6-button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  width: 196px;
+  border: 2px solid #000;
+  color: black;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 18px;
+  text-align: justify;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-6 .sec-6-button .bi-arrow-right {
+  font-size: 28px;
+  border-left: #003566 solid 1px;
+  margin-left: 20px;
+  padding-left: 5px;
+  height: 40px;
+  line-height: 1.5;
+}
+
+#section-6 .sec-6-button:hover {
+  padding-left: 15px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#section-6 .sec-6-button:hover .bi-arrow-right {
+  position: absolute;
+  border-right: #000000 solid 1px;
+  background-color: #000000;
+  color: #fff;
+  left: -22px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#section-6 .bg-reotation {
+  position: absolute;
+  bottom: -300px;
+  left: -500px;
+  width: 160%;
+  height: 90vh;
+  background-color: #FDC742;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  z-index: 0;
+}
+
+.section-7 {
+  height: 100vh;
+  width: 100%;
+  background-color: #DDF9FF;
 }
 /*# sourceMappingURL=style.css.map */
