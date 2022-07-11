@@ -497,7 +497,61 @@ html {
   margin-top: 200px;
 }
 
-.section-5 .sec-5-button {
+.section-5 .sec-5-colums .visually-captivating h1 {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 65px;
+  text-align: center;
+}
+
+.section-5 .sec-5-colums .visually-captivating p {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.section-5 .sec-5-colums #conversion-as h1 {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.section-5 .sec-5-colums #conversion-as p {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.section-5 .sec-5-colums .concise h1 {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.section-5 .sec-5-colums .concise p {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.sec-5-button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 40px;
@@ -522,7 +576,7 @@ html {
   margin-top: 50px;
 }
 
-.section-5 .sec-5-button .bi-arrow-right {
+.sec-5-button .bi-arrow-right {
   font-size: 28px;
   border-left: #003566 solid 1px;
   margin-left: 20px;
@@ -531,13 +585,13 @@ html {
   line-height: 1.5;
 }
 
-.section-5 .sec-5-button:hover {
+.sec-5-button:hover {
   padding-left: 15px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-.section-5 .sec-5-button:hover .bi-arrow-right {
+.sec-5-button:hover .bi-arrow-right {
   position: absolute;
   border-right: #000000 solid 1px;
   background-color: #000000;
@@ -547,7 +601,7 @@ html {
   transition: all 0.5s ease;
 }
 
-.section-5 .title-container {
+.title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -563,7 +617,7 @@ html {
           justify-content: center;
 }
 
-.section-5 .title-container h1 {
+.title-container h1 {
   color: #FDB913;
   font-family: Montserrat;
   font-size: 90px;
@@ -574,7 +628,7 @@ html {
   width: 75%;
 }
 
-.section-5 .title-container p {
+.title-container p {
   color: #000;
   font-family: Montserrat;
   font-size: 20px;
@@ -695,15 +749,24 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
   overflow: hidden;
+}
+
+.section-7 .slid-2,
+.section-7 .slid-3,
+.section-7 .slid-4,
+.section-7 .slid-5,
+.section-7 .slid-6,
+.section-7 .slid-7 {
+  display: none;
 }
 
 .section-7 .sec-7-first-row-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 
 .section-7 .sec-7-first-row-container .sec-7-elemnt-1 {
@@ -849,5 +912,231 @@ html {
   left: -22px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.section-8 {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-8 .sec-8-col-1-text {
+  color: #003566;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+}
+
+.section-8 .sec-8-col-2-text {
+  padding-top: 50px;
+  color: #003566;
+  font-family: Montserrat;
+  font-size: 17px;
+  line-height: 30px;
+  -webkit-transition: all ease-in-out 50ms;
+  transition: all ease-in-out 50ms;
+}
+
+.section-9 {
+  width: 100%;
+  height: 100vh;
+}
+
+.section-9 .row > * {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.section-9 .sec-9-left-col {
+  background-color: #EEE;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 10% !important;
+}
+
+.section-9 .sec-9-left-col .sec-9-col-1-text {
+  color: #003566;
+  font-family: 'Montserrat';
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  width: 75%;
+}
+
+.section-9 .sec-9-left-col .sec-9-col-1-p {
+  color: #003566;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: left;
+}
+
+.section-9 .sec-9-left-col .sec-9-button {
+  height: 40px;
+  width: 220px;
+  border: 2px solid #003566;
+  color: #003566;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-9 .sec-9-left-col .sec-9-button .bi-arrow-right {
+  font-size: 28px;
+  border-left: #003566 solid 1px;
+  margin-left: 20px;
+  padding-left: 5px;
+  height: 40px;
+  line-height: 1.5;
+}
+
+.section-9 .sec-9-left-col .sec-9-button:hover {
+  padding-left: 15px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.section-9 .sec-9-left-col .sec-9-button:hover .bi-arrow-right {
+  position: absolute;
+  border-right: #000000 solid 1px;
+  background-color: #000000;
+  color: #fff;
+  left: -22px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.section-9 .sec-9-right-col {
+  height: 100vh;
+}
+
+.section-9 .sec-9-right-col img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-10 {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(139.8deg, #DCF8F0 0%, #AAEDEB 68.8%, #CFF1ED 100%);
+}
+
+.section-10 .section-10-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Montserrat';
+  text-align: center;
+  color: #003566;
+}
+
+.section-10 .section-10-container .sec-10-text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+}
+
+.section-10 .section-10-container .sec-10-text-2 {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1;
+  width: 50%;
+}
+
+.section-10 .section-10-container .sec-10-titel {
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 73px;
+  position: relative;
+  z-index: 5;
+}
+
+.section-10 .section-10-container .comma-1 {
+  color: #CFFFFB;
+  font-size: 400px;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  left: -150px;
+  top: -100px;
+  z-index: -2;
+}
+
+.section-10 .section-10-container .comma-2 {
+  color: #CFFFFB;
+  font-size: 400px;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  right: -150px;
+  top: -100px;
+  z-index: -2;
+}
+
+.section-10 .section-10-container .joyce {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+footer {
+  background-color: #000;
+  width: 100%;
+  height: 18vh;
+  color: #8B8B8B;
+  font-family: 'Montserrat';
+  padding-top: 50px;
+}
+
+footer .footer-links a {
+  padding-right: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
