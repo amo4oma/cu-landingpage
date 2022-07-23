@@ -155,7 +155,10 @@ html {
         }
 
         overflow: hidden;
-
+        .sec-2-heading{
+            position: relative;
+         
+        }
         h1 {
             font-family: 'Montserrat';
             font-size: 60px;
@@ -281,7 +284,7 @@ html {
 
 
             .card-image {
-                width: 27em;
+                width: 37em;
 
 
             }
@@ -404,7 +407,14 @@ html {
     color: #fff;
     display: flex;
     flex-direction: column;
-
+.background-icons{
+    width: 310px;
+    height: 500px;
+    position: absolute;
+   margin-top: 50px;
+   object-fit: contain;
+   display: none;
+}
     .why-important {
         font-family: 'Montserrat';
 
@@ -421,11 +431,11 @@ html {
 
     .bulding-blocks {
         margin-top: 10px;
-        background-image: url(../Assests/sec-4-bg.png);
+        background-image: url(../Assests/sec-4-bg-blank.png);
         background-size: contain;
         background-repeat: no-repeat;
-        width: 500px;
-        height: 600px;
+        width: 530px;
+        height: 750px;
 
         // display: none;
         p {
@@ -790,11 +800,15 @@ html {
             font-weight: 700;
             line-height: 50px;
             text-align: center;
+            display: none;
 
             h6 {
                 font-size: 12px;
                 padding: 0px 70px;
             }
+        }
+        .sec-7-heading-1{
+            display: block;
         }
 
         .sec-7-elemnt-5 {

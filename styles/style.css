@@ -149,6 +149,10 @@ html {
   position: relative !important;
 }
 
+#section-2 .section-2-row .sec-2-heading {
+  position: relative;
+}
+
 #section-2 .section-2-row h1 {
   font-family: 'Montserrat';
   font-size: 60px;
@@ -290,7 +294,7 @@ html {
 }
 
 #projects .slider-container .card .card-image {
-  width: 27em;
+  width: 37em;
 }
 
 #projects .slider-container .card .card-text-col {
@@ -421,6 +425,16 @@ html {
           flex-direction: column;
 }
 
+#section-4 .background-icons {
+  width: 310px;
+  height: 500px;
+  position: absolute;
+  margin-top: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: none;
+}
+
 #section-4 .why-important {
   font-family: 'Montserrat';
 }
@@ -437,11 +451,11 @@ html {
 
 #section-4 .bulding-blocks {
   margin-top: 10px;
-  background-image: url(../Assests/sec-4-bg.png);
+  background-image: url(../Assests/sec-4-bg-blank.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 500px;
-  height: 600px;
+  width: 530px;
+  height: 750px;
 }
 
 #section-4 .bulding-blocks p {
@@ -833,11 +847,16 @@ html {
   font-weight: 700;
   line-height: 50px;
   text-align: center;
+  display: none;
 }
 
 .section-7 .sec-7-third-row-container .heading-2 h6 {
   font-size: 12px;
   padding: 0px 70px;
+}
+
+.section-7 .sec-7-third-row-container .sec-7-heading-1 {
+  display: block;
 }
 
 .section-7 .sec-7-third-row-container .sec-7-elemnt-5 {
