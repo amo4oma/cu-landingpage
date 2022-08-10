@@ -276,7 +276,25 @@ function toggleOff() {
     secSix.fromTo('.bg-reotation',2,{rotation: 0, opacity: 0},{rotation:25, opacity:1})  
     secSix.from('#engaeg-btn',2,{y:'100%', opacity:0})  
      
-    
+    //
+
+
+
+    let titleScale= gsap.timeline({
+      scrollTrigger:{
+        trigger: '.sec-6-button',
+        scrub: 1.3,
+        // markers:true,
+        start : "top top",
+        end: '+100% ',
+
+
+      }
+    })
+     
+    titleScale.from('.heading-1',1,{scale: 0})
+
+    //
 
 
     let secSev= gsap.timeline({
@@ -292,7 +310,7 @@ function toggleOff() {
       }
     })
      
-
+ 
 //2
     secSev.to('.section-7', {backgroundColor: '#FFF5FA'},'f')
     secSev.to('.sec-7-number', {color: '#F05B89'},'f')
