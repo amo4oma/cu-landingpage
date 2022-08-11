@@ -67,19 +67,7 @@ let tl2 = gsap.timeline({
         };
  
  
-function toggleOn() {
-  gsap.to({}, {duration: 8 })
-  $('.card').addClass('opacityZero');
-  $('.card').removeClass('opacityOne');
-  $('.slider-container').css('background','#171717');
  
- 
-}
-function toggleOff() {
-  $('.card').addClass('opacityOne');
-  $('.card').removeClass('opacityZero');
- 
-}
  let projectSlides = gsap.timeline({
   scrollTrigger : {
     trigger: '.projects',
@@ -109,31 +97,12 @@ function toggleOff() {
  });
  sec3Extention.to('.sec-3-to-4',1,{backgroundColor: '#171717'})
  
-        // gsap.to(sections, {
-        //   xPercent: -101.5 * (sections.length - 1),
-        //   ease: "none",
-        //   scrollTrigger: {
-        //     trigger: ".slider-container",
-        //     pin: true,
-        //     scrub: 1,
-        //     snap: 1 / (sections.length - 1),
-        //     // base vertical scrolling on how wide the container is so it feels more natural.
-        //     end: "+=3600",
-      
-        //     onLeave:toggleOn,
-        //     onEnterBack: toggleOff,
-    
-         
-        //   },
-
-        
-          
-        // });
+ 
         let tlsB = gsap.timeline({
           scrollTrigger :{
               trigger : ".slider-container",
               // markers:true,
-              scrub: true,
+              scrub: 1,
               nullTargetWarn: false,
               start : "top top",
               end: '+=3600',
@@ -161,7 +130,7 @@ function toggleOff() {
             scrollTrigger :{
                 trigger : ".section-4",
                 pin: true, 
-                scrub: true,
+                scrub: 1.5,
                 // markers:true,
                 start : "top top",
                 end: '+=1500',
@@ -242,7 +211,7 @@ function toggleOff() {
      let secFiveT= gsap.timeline({
       scrollTrigger:{
         trigger: '.section-5',
-        scrub: true,
+        scrub: 2,
         // markers:true,
         start : "top top",
         end: '+=700',
@@ -252,17 +221,17 @@ function toggleOff() {
     })
 
     secFiveT.fromTo('.visually-captivating',5,{x:'-20%'},{x:'50%'},'k')
-    gsap.to({}, {duration: 2})
+    secFiveT.to({}, {duration: 2})
     secFiveT.fromTo('.conversion-as',5,{x:'100%'},{x:'-60%'},'k')
-    gsap.to({}, {duration: 2})
+    secFiveT.to({}, {duration: 2})
     secFiveT.fromTo('.concise',5,{x:'-100%'},{x:'60%'},'k')
-    gsap.to({}, {duration: 2})
+    secFiveT.to({}, {duration: 2})
     secFiveT.from('.sec-5-button',5,{y:'300%', opacity:0},'ke')
  
     let secSix= gsap.timeline({
       scrollTrigger:{
          trigger: '.section-6',
-        scrub: true,
+        scrub: 2,
         pin:true,
         // markers:true,
         start : "top top",
@@ -275,6 +244,7 @@ function toggleOff() {
  
     secSix.fromTo('.bg-reotation',2,{rotation: 0, opacity: 0},{rotation:25, opacity:1})  
     secSix.from('#engaeg-btn',2,{y:'100%', opacity:0})  
+    secSix.to({}, {duration: 2})
      
     //
 
@@ -283,10 +253,11 @@ function toggleOff() {
     let titleScale= gsap.timeline({
       scrollTrigger:{
         trigger: '.sec-6-button',
-        scrub: 1.3,
+        scrub: 2,
         // markers:true,
         start : "top top",
         end: '+100% ',
+    
 
 
       }
@@ -305,7 +276,7 @@ function toggleOff() {
         // markers:true,
         start : "top top",
         end: '+200% ',
-
+  
 
       }
     })
@@ -377,11 +348,11 @@ secEight.from('.sec-8-col-2-text', 2 , {y:'100%', x:'100%',opacity:0}, 'firstTex
 
 let secTen= gsap.timeline({
   scrollTrigger:{
-    trigger: '.section-10',
-    scrub: true,
+    trigger: '.sec-10-extntion',
+    scrub: 2,
     // markers:true,
-    start : "-=400",
-    end: '+=300',
+    start : "bottom bottom ",
+    end: '+=500',
 
  
   }
@@ -391,12 +362,13 @@ let secTen= gsap.timeline({
 secTen.from('.sec-10-text',15,{opacity:0, scale:-0.5 ,y :'100%'},'animation')
 secTen.from('.sec-10-text-2',15,{opacity:0, scale:-0.5,y :'100%'},'animation-2')
 secTen.from('.sec-10-titel',15,{opacity:0, scale:-0.5,y :'100%'},'animation-3')
+secTen.from('.joyce',15,{opacity:0, scale:-0.5,y :'100%'},'animation-3')
 
 
 let secEliven= gsap.timeline({
   scrollTrigger:{
     trigger: '.section-9',
-    scrub: 1.3,
+    scrub: 1.7,
     pin:false,
     // markers:true,
     start : "top =+50%",
@@ -405,8 +377,10 @@ let secEliven= gsap.timeline({
 
   }
 })
- 
-secEliven.from('.sec-9-col-1-text', { x:'-150%'})
-secEliven.from('.sec-9-col-1-p', { x:'-150%'})
-secEliven.from('#engaeg-btn', { x:'-150%'})
+secEliven.to('.anything',5,{ width:'0%'})
+secEliven.to('.extraordaniry',4, { width:'0%'})
+secEliven.to('.wont-do',3, { width:'0%'})
+// secEliven.from('.sec-9-col-1-text', { x:'-150%'})
+// secEliven.from('.sec-9-col-1-p', { x:'-150%'})
+// secEliven.from('#engaeg-btn', { x:'-150%'})
  

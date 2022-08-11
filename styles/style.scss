@@ -758,7 +758,10 @@ html {
     .slid-7 {
         display: none;
     }
-
+    .heading-2{
+        width: 300px;
+        height: 150px;
+    }
     .sec-7-first-row-container {
         position: relative;
         overflow: hidden;
@@ -957,6 +960,7 @@ html {
         justify-content: center;
         flex-direction: column;
         padding-left: 10% !important;
+        position: relative;
         .sec-9-col-1-text{
             color: #003566;
             font-family: 'Montserrat';
@@ -964,7 +968,18 @@ html {
             font-weight: 700;
             line-height: 59px;
             width: 75%;
+            position: relative;
+  
         }
+        .cover{
+            height: 60px;
+            width: 100%;
+            background-color: #EEE;
+            position: absolute;
+            transition: clip-path 1s ease-in-out;
+            clip-path:inset(1);
+        }
+   
         .sec-9-col-1-p{
             color: #003566;
             font-family: 'Montserrat';
@@ -972,7 +987,9 @@ html {
             font-weight: 500;
             line-height: 34px;
             text-align: left;
+            position: relative;
         }
+    
         .sec-9-button {
 
             height: 40px;
@@ -1032,8 +1049,12 @@ html {
     width: 100%;
     display: flex;
     align-items: center;
+    flex-direction: column;
     background: linear-gradient(139.8deg, #DCF8F0 0%, #AAEDEB 68.8%, #CFF1ED 100%);
-
+.sec-10-extntion{
+    height: 30vh;
+    width: 100%;
+}
     .section-10-container{
      display: flex;
     flex-wrap: wrap;

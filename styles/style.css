@@ -823,6 +823,11 @@ html {
   display: none;
 }
 
+.section-7 .heading-2 {
+  width: 300px;
+  height: 150px;
+}
+
 .section-7 .sec-7-first-row-container {
   position: relative;
   overflow: hidden;
@@ -1030,6 +1035,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 10% !important;
+  position: relative;
 }
 
 .section-9 .sec-9-left-col .sec-9-col-1-text {
@@ -1039,6 +1045,20 @@ html {
   font-weight: 700;
   line-height: 59px;
   width: 75%;
+  position: relative;
+}
+
+.section-9 .sec-9-left-col .cover {
+  height: 60px;
+  width: 100%;
+  background-color: #EEE;
+  position: absolute;
+  -webkit-transition: -webkit-clip-path 1s ease-in-out;
+  transition: -webkit-clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
+  -webkit-clip-path: inset(1);
+          clip-path: inset(1);
 }
 
 .section-9 .sec-9-left-col .sec-9-col-1-p {
@@ -1048,6 +1068,7 @@ html {
   font-weight: 500;
   line-height: 34px;
   text-align: left;
+  position: relative;
 }
 
 .section-9 .sec-9-left-col .sec-9-button {
@@ -1118,7 +1139,16 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: linear-gradient(139.8deg, #DCF8F0 0%, #AAEDEB 68.8%, #CFF1ED 100%);
+}
+
+.section-10 .sec-10-extntion {
+  height: 30vh;
+  width: 100%;
 }
 
 .section-10 .section-10-container {
