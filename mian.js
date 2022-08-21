@@ -30,15 +30,17 @@ let tl2 = gsap.timeline({
         scrub: true,
         nullTargetWarn: false,
         start : "top top",
-        end: '+=1600',
+        end: '+=1700',
       }
         });
 
         tl2.fromTo('#section-2', 5, {y:"0%", },{y:"-100%"},'first')
         tl2.fromTo('.sec-2-element-1', 10, {y:"100%", },{y:"-170%", rotation : -50},'s');
-        tl2.fromTo('.sec-2-heading', 10, {x:"-100%", },{x:"0%"},'s');
-        tl2.fromTo('.effictive-landing-page', 10, {x:"100%", },{x:"0%"},'s');
-        tl2.fromTo('.combining', 10, {x:"100%", },{x:"0%"},'s');
+        tl2.from('.slid-text-one',9,{x:'-100%'},'se')
+        tl2.from('.slid-text-two',9,{x:'-100%',delay:1},'se')
+        tl2.from('.slid-text-three',9,{x:'-100%',delay:2},'se')
+        tl2.from('.slid-text-four',9,{x:'-100%',delay:3},'se')
+    
 
        let ext = gsap.timeline({
           scrollTrigger :{
@@ -179,10 +181,10 @@ let tl2 = gsap.timeline({
      let secFive= gsap.timeline({
        scrollTrigger:{
          trigger: '.ext-3',
-         scrub: true,
+         scrub: 1.5,
         //  markers:true,
          start : "center center",
-         end: '+=1500',
+         end: '+=1000',
 
 
        }
@@ -190,6 +192,9 @@ let tl2 = gsap.timeline({
 
 
      secFive.from('.title-container',15,{scale:-5},'title animation');
+     secFive.to({}, {duration: 2}) 
+ 
+      
 
 
      let YellowExt= gsap.timeline({
@@ -231,7 +236,7 @@ let tl2 = gsap.timeline({
     let secSix= gsap.timeline({
       scrollTrigger:{
          trigger: '.section-6',
-        scrub: 2,
+        scrub: 2.5,
         pin:true,
         // markers:true,
         start : "top top",
@@ -241,8 +246,10 @@ let tl2 = gsap.timeline({
 
       }
     })
- 
+    
     secSix.fromTo('.bg-reotation',2,{rotation: 0, opacity: 0},{rotation:25, opacity:1})  
+   
+    secSix.to({}, {duration: 2})
     secSix.from('#engaeg-btn',2,{y:'100%', opacity:0})  
     secSix.to({}, {duration: 2})
      
@@ -380,6 +387,7 @@ let secEliven= gsap.timeline({
 secEliven.to('.anything',5,{ width:'0%'})
 secEliven.to('.extraordaniry',4, { width:'0%'})
 secEliven.to('.wont-do',3, { width:'0%'})
+secEliven.to('.make',3, { width:'0%'})
 // secEliven.from('.sec-9-col-1-text', { x:'-150%'})
 // secEliven.from('.sec-9-col-1-p', { x:'-150%'})
 // secEliven.from('#engaeg-btn', { x:'-150%'})

@@ -11,6 +11,7 @@ html {
 
 .blue {
   color: #003566;
+  width: 0%;
 }
 
 #home {
@@ -167,6 +168,13 @@ html {
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
+  position: relative;
+}
+
+#section-2 .section-2-row .cover {
+  width: 400px;
+  height: 150px;
+  position: absolute;
 }
 
 #section-2 .section-2-row .sec-2-left-col {
@@ -192,7 +200,13 @@ html {
   width: 200px;
   position: absolute;
   left: 0px;
-  bottom: 150px;
+  bottom: 100px;
+}
+
+@media screen and (max-width: 1400px) {
+  #section-2 .element-3-small {
+    bottom: 0px;
+  }
 }
 
 #section-2 .effictive-landing-page {
@@ -927,7 +941,7 @@ html {
   width: 250px;
   position: absolute;
   left: 20%;
-  top: 150px;
+  top: 110px;
 }
 
 .section-7 .sec-7-fourth-row-container .sec-7-elemnt-7 {
@@ -1046,6 +1060,13 @@ html {
   line-height: 59px;
   width: 75%;
   position: relative;
+}
+
+@media screen and (max-width: 1452px) {
+  .section-9 .sec-9-left-col .sec-9-col-1-text {
+    font-size: 38px;
+    line-height: 1;
+  }
 }
 
 .section-9 .sec-9-left-col .cover {
