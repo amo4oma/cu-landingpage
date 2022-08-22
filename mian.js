@@ -45,7 +45,7 @@ let tl2 = gsap.timeline({
        let ext = gsap.timeline({
           scrollTrigger :{
               trigger : ".extinstion",
-           markers:true,
+          //  markers:true,
               toggleActions: 'play none play none',
               scrub: true,
               nullTargetWarn: false,
@@ -201,7 +201,7 @@ let tl2 = gsap.timeline({
        scrollTrigger:{
          trigger: '.ext-3',
          scrub: true,
-         markers:true,
+        //  markers:true,
          start : "top top",
          end: '+=1000',
 
