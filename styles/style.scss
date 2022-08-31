@@ -168,7 +168,7 @@ html {
         }
         h1 {
             font-family: 'Montserrat';
-            font-size: 60px;
+            font-size: 70px;
             font-weight: 700;
             line-height: 1.2;
             color: #fff;
@@ -176,6 +176,9 @@ html {
 
        
 
+        }
+        .slid-text-two{
+            color: #003566;
         }
       
     .cover{
@@ -190,8 +193,9 @@ html {
         .sec-2-element-1 {
             width: 250px;
             position: relative;
-            left: 120px;
+            left: 50px;
             z-index: 555;
+            transform-origin: 0 100%;
         }
 
         .sec-2-element-2 {
@@ -440,6 +444,9 @@ html {
     color: #fff;
     display: flex;
     flex-direction: column;
+    .main-container{
+        position: relative;
+    }
 .background-icons{
     width: 310px;
     height: 500px;
@@ -467,10 +474,9 @@ html {
         background-image: url(../Assests/sec-4-bg-blank.png);
         background-size: cover;
         background-repeat: no-repeat;
-        width: 530px;
-        height: 750px;
-
-        // display: none;
+        width: 60%;
+        height: 60%;
+        opacity: 0;
         p {
             font-size: 17px;
             font-family: "Montserrat";
@@ -488,21 +494,25 @@ html {
     }
 
     .sec-4-scroll-bar-container {
-        height: 20px;
-        width: 500px;
-        display: block;
+        height: 60%;
+        width:fit-content;
+        position: absolute;
+        left: 19%;
+        top: 200px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+     
 
         .sec-4-scroll-dot {
-            height: 2px;
-            width: 20px;
+            height: 35px;
+            width: 3px;
             background-color: #1E1E1E;
             margin-right: 5px;
-            margin-bottom: 50px;
-
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 5;
         }
 
     }
@@ -511,7 +521,7 @@ html {
 
 .section-5 {
     width: 100%;
-    height: 180vh;
+    height: 100%;
     background-color: #FDB913;
     padding-top: 200px;
     overflow: hidden;
@@ -520,6 +530,8 @@ html {
         margin-top: 200px;
 
         .visually-captivating {
+            position: relative;
+            left: -200px;
             h1 {
                 color: #000;
                 font-family: 'Montserrat';
@@ -543,6 +555,8 @@ html {
 
         #conversion-as {
             margin-top: 30px;
+            position: relative;
+            left: 200px;
             h1 {
                 color: #000;
                 font-family: 'Montserrat';
@@ -565,6 +579,8 @@ html {
 
         .concise {
             margin-top: 30px;
+            position: relative;
+            left: -200px;
             h1 {
                 color: #000;
                 font-family: 'Montserrat';
@@ -642,6 +658,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 570px;
 
     h1 {
         color: #FDB913;
@@ -1068,7 +1085,7 @@ html {
     flex-direction: column;
     background: linear-gradient(139.8deg, #DCF8F0 0%, #AAEDEB 68.8%, #CFF1ED 100%);
 .sec-10-extntion{
-    height: 30vh;
+    height: 50vh;
     width: 100%;
 }
     .section-10-container{
@@ -1133,7 +1150,7 @@ html {
 footer{
     background-color: #000;
     width: 100%;
-    height: 18vh;
+    height: 20vh;
     color: #8B8B8B;
     font-family: 'Montserrat';
     padding-top: 50px;

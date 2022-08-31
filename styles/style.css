@@ -164,11 +164,15 @@ html {
 
 #section-2 .section-2-row h1 {
   font-family: 'Montserrat';
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
   position: relative;
+}
+
+#section-2 .section-2-row .slid-text-two {
+  color: #003566;
 }
 
 #section-2 .section-2-row .cover {
@@ -184,8 +188,10 @@ html {
 #section-2 .section-2-row .sec-2-element-1 {
   width: 250px;
   position: relative;
-  left: 120px;
+  left: 50px;
   z-index: 555;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 
 #section-2 .section-2-row .sec-2-element-2 {
@@ -467,6 +473,10 @@ html {
           flex-direction: column;
 }
 
+#section-4 .main-container {
+  position: relative;
+}
+
 #section-4 .background-icons {
   width: 310px;
   height: 500px;
@@ -496,8 +506,9 @@ html {
   background-image: url(../Assests/sec-4-bg-blank.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 530px;
-  height: 750px;
+  width: 60%;
+  height: 60%;
+  opacity: 0;
 }
 
 #section-4 .bulding-blocks p {
@@ -516,16 +527,20 @@ html {
 }
 
 #section-4 .sec-4-scroll-bar-container {
-  height: 20px;
-  width: 500px;
-  display: block;
+  height: 60%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  left: 19%;
+  top: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -535,16 +550,18 @@ html {
 }
 
 #section-4 .sec-4-scroll-bar-container .sec-4-scroll-dot {
-  height: 2px;
-  width: 20px;
+  height: 35px;
+  width: 3px;
   background-color: #1E1E1E;
   margin-right: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 5;
 }
 
 .section-5 {
   width: 100%;
-  height: 180vh;
+  height: 100%;
   background-color: #FDB913;
   padding-top: 200px;
   overflow: hidden;
@@ -552,6 +569,11 @@ html {
 
 .section-5 .sec-5-colums {
   margin-top: 200px;
+}
+
+.section-5 .sec-5-colums .visually-captivating {
+  position: relative;
+  left: -200px;
 }
 
 .section-5 .sec-5-colums .visually-captivating h1 {
@@ -576,6 +598,8 @@ html {
 
 .section-5 .sec-5-colums #conversion-as {
   margin-top: 30px;
+  position: relative;
+  left: 200px;
 }
 
 .section-5 .sec-5-colums #conversion-as h1 {
@@ -599,6 +623,8 @@ html {
 
 .section-5 .sec-5-colums .concise {
   margin-top: 30px;
+  position: relative;
+  left: -200px;
 }
 
 .section-5 .sec-5-colums .concise h1 {
@@ -690,6 +716,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 570px;
 }
 
 .title-container h1 {
@@ -1168,7 +1195,7 @@ html {
 }
 
 .section-10 .sec-10-extntion {
-  height: 30vh;
+  height: 50vh;
   width: 100%;
 }
 
@@ -1246,7 +1273,7 @@ html {
 footer {
   background-color: #000;
   width: 100%;
-  height: 18vh;
+  height: 20vh;
   color: #8B8B8B;
   font-family: 'Montserrat';
   padding-top: 50px;
