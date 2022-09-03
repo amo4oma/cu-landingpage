@@ -477,6 +477,10 @@ html {
         width: 60%;
         height: 60%;
         opacity: 0;
+        position: relative;
+        div{
+            position: absolute;
+        }
         p {
             font-size: 17px;
             font-family: "Montserrat";
@@ -790,6 +794,8 @@ html {
     .heading-2{
         width: 300px;
         height: 150px;
+        position: relative;
+        bottom:50px;
     }
     .sec-7-first-row-container {
         position: relative;
@@ -868,7 +874,7 @@ html {
             display: none;
 
             h6 {
-                font-size: 12px;
+                font-size: 18px;
                 padding: 0px 70px;
             }
         }

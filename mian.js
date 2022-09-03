@@ -35,7 +35,8 @@ let tl2 = gsap.timeline({
         });
 
         tl2.fromTo('#section-2', 5, {y:"0%", },{y:"-100%"},'first')
-     
+        tl2.fromTo('.element-container', 5, {},{delay:15},'second')
+        
         tl2.from('.slid-text-one',9,{x:'-100%',delay:3},'se')
         tl2.from('.slid-text-two',9,{x:'-100%',delay:5},'se')
         tl2.from('.slid-text-three',9,{x:'-100%',delay:6},'se')
@@ -83,7 +84,6 @@ let tl2 = gsap.timeline({
 
  
 
-
  projectSlides.to('.card.one', 15 , {x: '-170%'},'d')
  projectSlides.to('.card.two', 15 , {x: '-190%'},'d')
  projectSlides.to('.card.three', 15 , {x: '-200%'},'d')
@@ -113,18 +113,16 @@ let tl2 = gsap.timeline({
               });
 
               tlsB.to('.scroll-bar-container',{display:'flex'})
-              tlsB.to('.first',9,{backgroundColor:'#dbdbdb'},'first')
-              tlsB.to('.second',9,{backgroundColor:'#003566'},'first-')
-              tlsB.to('.second',9,{backgroundColor:'#dbdbdb'},'second')
-              tlsB.to('.third',9,{backgroundColor:'#003566'},'second-')
-              tlsB.to('.third',9,{backgroundColor:'#dbdbdb'},'third')
-              tlsB.to('.forth',9,{backgroundColor:'#003566'},'third-')
-              tlsB.to('.forth',9,{backgroundColor:'#dbdbdb'},'forth')
-              tlsB.to('.fifth',9,{backgroundColor:'#003566'},'forth')
-              tlsB.to('.fifth',9,{backgroundColor:'#dbdbdb'},'fifth-')
-              tlsB.to('.sixth',9,{backgroundColor:'#003566'},'fifth')
-              tlsB.to('.sixth',9,{backgroundColor:'#dbdbdb'},'sixth')
-             
+              tlsB.to('.first',9,{backgroundColor:'#003566'})
+              tlsB.to('.first',9,{backgroundColor:'#dbdbdb'})
+              tlsB.to('.second',9,{backgroundColor:'#003566'})
+              tlsB.to('.second',9,{backgroundColor:'#003566'})
+              tlsB.to('.second',9,{backgroundColor:'#dbdbdb'})
+              tlsB.to('.third',9,{backgroundColor:'#003566'})
+              tlsB.to('.third',9,{backgroundColor:'#003566'})
+              tlsB.to('.third',9,{backgroundColor:'#003566'})
+              tlsB.to('.third',9,{backgroundColor:'#dbdbdb'})
+
               tlsB.to('.scroll-bar-container',9,{display:'none'},'final-1')
              
       
@@ -141,41 +139,31 @@ let tl2 = gsap.timeline({
                 });
           secF.to('.why-important',5,{y:'-30%',opacity:0})
           secF.to('.bulding-blocks',5,{opacity:1})
-           secF.fromTo('.text-one',5,{opacity:0,y:'100%'},{y:'-100%',opacity: 1},'first')
+           secF.fromTo('.text-one',5,{opacity:0,y:'200%'},{y:'-100%',opacity: 1},'first')
            secF.to('.first-dot',5,{backgroundColor:'#fff'},'first')
-           secF.to('.bg-icon-one',5,{display:'block'},'first')
-           secF.to({}, {duration: 2})
-           secF.to('.bg-icon-one',1,{display:'none'},'second2')
-           secF.to('.bg-icon-two',5,{display:'block'},'second')
+           secF.to('first-dot',5,{})
            secF.to('.text-one',5,{opacity:0, y:'-200%'}, 'second')
            secF.to('.first-dot',5,{backgroundColor:'#1E1E1E'},'second')
-           secF.to('.second-dot',5,{backgroundColor:'#fff'},'second')
-           
+           secF.to('.second-dot',5,{backgroundColor:'#fff'},'second-2')
            secF.fromTo('.text-two',5,{opacity:0,y:'200%'},{y:'-100%',opacity: 1},'second-2')
-           secF.to({}, {duration: 2})
-           secF.to('.bg-icon-two',5,{display:'none'},'third')
-           secF.to('.bg-icon-three',5,{display:'block'},'third')
            secF.to('.second-dot',5,{backgroundColor:'#1E1E1E'},'third')
            secF.to('.third-dot',5,{backgroundColor:'#fff'},'third')
            secF.to('.text-two',5,{opacity:0, y:'-300%'}, 'third')
            secF.fromTo('.text-three',5,{opacity:0,y:'300%'},{y:'-100%',opacity: 1},'third-2')
-           secF.to({}, {duration: 2})
-           secF.to('.bg-icon-three',5,{display:'none'},'fourth')
-           secF.to('.bg-icon-four',5,{display:'block'},'fourth')
            secF.to('.third-dot',5,{backgroundColor:'#1E1E1E'},'fourth')
            secF.to('.forth-dot',5,{backgroundColor:'#fff'},'fourth')
            secF.to('.text-three',5,{opacity:0, y:'-400%'}, 'fourth')
            secF.fromTo('.text-four',5,{opacity:0,y:'100%'},{y:'-100%',opacity: 1},'fourth-2')
-           secF.to({}, {duration: 2})
-           secF.to('.bg-icon-four',5,{display:'none'},'fifth')
-           secF.to('.bg-icon-five',5,{display:'block'},'fifth')
-           secF.to('.text-four',5,{opacity:0, y:'-500%'}, 'fifth')
-           secF.to({}, {duration: 2})
+           secF.to('.forth-dot',5,{backgroundColor:'#1E1E1E'},'fourth-3')
+           secF.to('.fifth-dot',5,{backgroundColor:'#fff'},'fifth-3')
+           secF.to('.text-four',5,{opacity:0, y:'-500%'},'fifth-3')
+
            secF.fromTo('.text-five',5,{opacity:0,y:'100%'},{y:'-100%',opacity: 1},'fifth')
-  
+           secF.to('.fifth-dot',5,{backgroundColor:'#1E1E1E'},'fifth')
+           secF.to('.sixth-dot',5,{backgroundColor:'#fff'},'fifth')
            secF.to('.text-five',5,{opacity:0, y:'-400%'}, 'fifth-2')
            
-           secF.fromTo('.text-six',5,{opacity:0,y:'100%'},{y:'-500%',opacity: 1},'six')
+           secF.fromTo('.text-six',5,{opacity:0,y:'100%'},{y:'-100%',opacity: 1},'six')
 
 
 
@@ -218,7 +206,7 @@ let tl2 = gsap.timeline({
      let secFiveT= gsap.timeline({
       scrollTrigger:{
         trigger: '.title-container',
-        scrub: 2,
+        scrub: 1.5,
        
         start : "bottom =+80%",
         end: '+=600',
@@ -233,7 +221,7 @@ let tl2 = gsap.timeline({
    
     secFiveT.to('.concise',5,{x:'90%'},'k')
    
-    secFiveT.from('.sec-5-button',1,{y:'300%', opacity:0},'ke')
+    secFiveT.from('.sec-5-button',1,{y:'200%', opacity:0},'ks')
  
     let secSix= gsap.timeline({
       scrollTrigger:{
@@ -251,9 +239,9 @@ let tl2 = gsap.timeline({
     
     secSix.fromTo('.bg-reotation',2,{rotation: 0, opacity: 0},{rotation:25, opacity:1})  
    
-    secSix.to({}, {duration: 2})
+ 
     secSix.from('#engaeg-btn',2,{y:'100%', opacity:0})  
-    secSix.to({}, {duration: 2})
+     
      
     //
 
@@ -290,7 +278,7 @@ let tl2 = gsap.timeline({
       }
     })
      
- 
+    secSev.to('.section-7', {delay:4 },)
 //2
     secSev.to('.section-7', {backgroundColor: '#FFF5FA'},'f')
     secSev.to('.sec-7-number', {color: '#F05B89'},'f')
