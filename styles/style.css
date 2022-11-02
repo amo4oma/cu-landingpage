@@ -54,6 +54,8 @@ html {
   font-weight: 500;
   line-height: 20px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #home nav .contact-link {
@@ -104,13 +106,14 @@ html {
 
 #home .unicorn-container .unicorn {
   position: absolute;
-  top: 60px;
+  top: 0px;
   left: 50%;
   -webkit-transform: translate(-350px, 10px);
           transform: translate(-350px, 10px);
   height: 90%;
   -o-object-fit: contain;
      object-fit: contain;
+  z-index: 0;
 }
 
 .opacityZero {
@@ -221,7 +224,7 @@ html {
   font-size: 24px;
   font-style: italic;
   font-weight: 700;
-  line-height: 2;
+  line-height: 1.1;
 }
 
 #section-2 .combining {
@@ -492,17 +495,17 @@ html {
 }
 
 #section-4 .why-important h3 {
-  font-size: 35px;
+  font-size: 58px;
   font-weight: 700;
 }
 
 #section-4 .why-important h1 {
-  font-size: 42px;
+  font-size: 68px;
   font-weight: 700;
 }
 
 #section-4 .bulding-blocks {
-  margin-top: 10px;
+  margin-top: 0px;
   background-image: url(../Assests/sec-4-bg-blank.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -602,7 +605,7 @@ html {
 }
 
 .section-5 .sec-5-colums #conversion-as {
-  margin-top: 30px;
+  margin-top: 80px;
   position: relative;
   left: 200px;
 }
@@ -627,7 +630,7 @@ html {
 }
 
 .section-5 .sec-5-colums .concise {
-  margin-top: 30px;
+  margin-top: 80px;
   position: relative;
   left: -200px;
 }
@@ -653,7 +656,7 @@ html {
 
 .yellow-extention {
   width: 100%;
-  height: 50vh;
+  height: 80vh;
   background-color: #FDB913;
 }
 
@@ -1186,7 +1189,7 @@ html {
 }
 
 .section-10 {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1199,10 +1202,11 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   background: linear-gradient(139.8deg, #DCF8F0 0%, #AAEDEB 68.8%, #CFF1ED 100%);
+  padding-bottom: 150px;
 }
 
 .section-10 .sec-10-extntion {
-  height: 50vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -1231,6 +1235,7 @@ html {
   font-size: 48px;
   font-weight: 700;
   line-height: 59px;
+  padding-bottom: 100px;
 }
 
 .section-10 .section-10-container .sec-10-text-2 {
@@ -1284,6 +1289,8 @@ footer {
   color: #8B8B8B;
   font-family: 'Montserrat';
   padding-top: 50px;
+  position: relative;
+  top: 0px;
 }
 
 footer .footer-links a {

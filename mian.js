@@ -5,21 +5,73 @@ $('#home').mousemove(function(event){
     $('.unicorn').css('margin-top', -moveY + 'px');
  
   }); 
-$('#section-2').mousemove(function(event){
-    var moveX = (($(window).width() / 50) - event.pageX) * 0.07;
-    var moveY = (($(window).height() / 50) - event.pageY) * 0.08;
-    $('.sec-2-element-4').css('margin-left', moveX + 'px');
-    $('.sec-2-element-2').css('margin-top', -moveY + 'px');
-    $('.sec-2-element-2').css('margin-left', -moveY + 'px');
-    $('.element-3-small').css('margin-top', -moveY + 'px');
-    $('.element-3-small').css('margin-left', -moveY + 'px');
-    $('.sec-2-element-1').css('margin-top', -moveY + 'px');
-    $('.sec-2-element-1').css('margin-left', -moveY + 'px');
+// $('#section-2').mousemove(function(event){
+//     var moveX = (($(window).width() / 50) - event.pageX) * 0.07;
+//     var moveY = (($(window).height() / 50) - event.pageY) * 0.08;
+//     $('.sec-2-element-4').css('margin-left', moveX + 'px');
+//     $('.sec-2-element-2').css('margin-top', -moveY + 'px');
+//     $('.sec-2-element-2').css('margin-left', -moveY + 'px');
+//     $('.element-3-small').css('margin-top', -moveY + 'px');
+//     $('.element-3-small').css('margin-left', -moveY + 'px');
+//     $('.sec-2-element-1').css('margin-top', -moveY + 'px');
+//     $('.sec-2-element-1').css('margin-left', -moveY + 'px');
  
-  }); 
+//   }); 
+
+
+
+const throttled = (delay, fn) => {
+  let lastCall = 0;
+  return function (...args) {
+    const now = (new Date).getTime();
+    if (now - lastCall < delay) {
+      return;
+    }
+    lastCall = now;
+    return fn(...args);
+  }
+}
+
+const movableElementsWrapper = document.querySelector('.movable-elemnts-containet');
+
+const mouseMoveHandler = (e) => {
+      const y = e.movementY;
+      const x = e.movementX;
+  
+      let moveX = x > 0 ? -x : x;
+      let moveY = y > 0 ? -y : y;
+
+      const movableElements =   document.querySelectorAll('.movable');
+
+      movableElements.forEach(
+        (movableElement) => {
+          gsap.to(movableElement, {x: moveX, y: moveY, duration: 1})
+        }
+      );
+   };
+const speed = 0.35;
+
+const mouseMoveHandler2 = (e) => {
+  const movableElements =   document.querySelectorAll('.movable');
+
+  movableElements.forEach(
+    (movableElement) => {
+      const  shiftValue = movableElement.getAttribute('data-value');
+      const moveX = (e.clientX * shiftValue) / 250;
+      const moveY = (e.clientY * shiftValue) / 250;
+      
+      
+      gsap.to(movableElement, {x: moveX, y: moveY, duration: 1})
+
+    }
+  );
+};
+
+const tHandler = throttled(200, mouseMoveHandler2);
+movableElementsWrapper.onmousemove = tHandler;
 
   
-  gsap.registerPlugin(ScrollTrigger,TextPlugin);
+gsap.registerPlugin(ScrollTrigger,TextPlugin);
 
 
 let tl2 = gsap.timeline({
@@ -37,10 +89,10 @@ let tl2 = gsap.timeline({
         tl2.fromTo('#section-2', 5, {y:"0%", },{y:"-100%"},'first')
         tl2.fromTo('.element-container', 5, {},{delay:15},'second')
         
-        tl2.from('.slid-text-one',9,{x:'-100%',delay:3},'se')
-        tl2.from('.slid-text-two',9,{x:'-100%',delay:5},'se')
-        tl2.from('.slid-text-three',9,{x:'-100%',delay:6},'se')
-        tl2.from('.slid-text-four',9,{x:'-100%',delay:9},'se')
+        tl2.from('.slid-text-one',9,{x:'-100%',opacity:0,delay:3},'se')
+        tl2.from('.slid-text-two',9,{x:'-100%',opacity:0,delay:5},'se')
+        tl2.from('.slid-text-three',9,{x:'-100%',opacity:0,delay:6},'se')
+        tl2.from('.slid-text-four',9,{x:'-100%',opacity:0,delay:9},'se')
         tl2.to('.sec-2-element-1',9,{rotation:-70,delay:10},'se')
     
 
@@ -138,7 +190,7 @@ let tl2 = gsap.timeline({
               }
                 });
           secF.to('.why-important',5,{y:'-30%',opacity:0})
-          secF.to('.bulding-blocks',5,{opacity:1})
+          secF.to('.bulding-blocks',5,{y:'-15%', opacity:1})
            secF.fromTo('.text-one',5,{opacity:0,y:'200%'},{y:'-100%',opacity: 1},'first')
            secF.to('.first-dot',5,{backgroundColor:'#fff'},'first')
            secF.to('first-dot',5,{})
@@ -350,6 +402,7 @@ let secTen= gsap.timeline({
     // markers:true,
     start : "bottom bottom ",
     end: '+=500',
+   
 
  
   }
